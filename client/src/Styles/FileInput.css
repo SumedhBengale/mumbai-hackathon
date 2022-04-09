@@ -1,0 +1,43 @@
+/* This is used to reset the default styles 
+applied to every element in this app */
+
+.form__img-input-container {
+    position: relative;
+    margin: auto;
+}
+
+/* this class is used to hide the file input */
+.visually-hidden-1 {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Adding the focus and focus-within styles for accessibility */
+input.visually-hidden:focus + label,
+input.visually-hidden:focus-within + label {
+    outline: 3px solid rgba(59,130,246, .4);
+}
+
+/* The file input is a labeled control, and since we hid it, 
+we're going to use its associated label to trigger it */
+.form-img__file-label-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 5%;
+    cursor: pointer;
+    background-color: rgba(245, 245, 231, 0);
+}
+
+
+
+/* The image element is going to be positioned under the 
+label element, since the label is a see through, we're going 
+to be able to see the preview of the image. */
+.form-img__img-preview-1 {
+    display: block;
+    object-fit: cover;
+     border: 3px rgb(59,130,246) solid;
+}
