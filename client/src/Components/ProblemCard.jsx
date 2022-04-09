@@ -13,7 +13,7 @@ function ProblemCard() {
                     <p>Problem Location</p>
                     <div className='flex place-content-between'>
                         <div class="card-actions items-center">
-                            <label for="my-modal-1" class="btn btn-primary rounded-md btn-outline modal-button btn-sm hover:-translate-y-1 mt-10">Read More</label>
+                            <label for="my-modal-1" class="btn rounded-md btn-outline modal-button btn-sm hover:-translate-y-1 mt-10 border-blue-500 text-blue-500 hover:bg-blue-500 active:bg-blue-500">Read More</label>
 
 
                             <input type="checkbox" id="my-modal-1" class="modal-toggle"></input>
