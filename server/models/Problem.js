@@ -1,21 +1,21 @@
 const mongoose = require('mongoose')
 
 const problemSchema = new mongoose.Schema({ 
+    userId:{
+        type:String,
+        required: true
+    },
     title:{
         type: String,
-        required:[true, 'please provide an problem title']
+        required: true
     },
     address:{
         type: String,
-        required: [true, 'please provide an problem address'],
+        required: true,
     },
     statement:{
         type: String,
-        required: [true, 'please provide an problem address'],
-    },
-    userId:{
-        type: String,
-        default: []
+        required: true,
     },
     upvotes:{
         type: Array,
@@ -29,23 +29,11 @@ const problemSchema = new mongoose.Schema({
         photo: {
             id:{
                 type: String,
-                required: true
+                // required: true
             },
             secure_url:{
                 type: String,
-                required: true
-            },        
-        },
-    },
-    modimg:{
-        photo: {
-            id:{
-                type: String,
-                required: true
-            },
-            secure_url:{
-                type: String,
-                required: true
+                // required: true
             },        
         },
     },

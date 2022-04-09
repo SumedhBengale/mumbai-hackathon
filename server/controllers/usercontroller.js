@@ -5,7 +5,7 @@ const cloudinary = require('cloudinary');
 const cookieToken = require('../utils/cookieToken')
 
 exports.signup = BigPromise(async (req, res, next ) => {
-let result ;
+    let result ;
     if(req.files){
         let file = req.files.photo
          result = await cloudinary.v2.uploader.upload(file.tempFilePath, {
@@ -60,23 +60,28 @@ exports.login = BigPromise(async (req, res, next) => {
 
 })
 
-// update
-exports.update = BigPromise( async( req, res, next) => {
-    const newData ={
-        name: req.body.name,
-        email: req.body.email
-    }
-   const user = await User.findByIdAndUpdate( req.user.id, newData, {
-       new: true,
-       runValidators: true.valueOf,
-       useFindAndModify: false
-   })
+// log out
+exports.logout = BigPromise( async (req, res, next) => {
+    res.cookie('token', null, {
+        expires: new Date(Date.now()),
+        httpOnly: true,
+    })
+    res.status(200).json({
+        success: true,
+        message: "Logout successfully"
+    });
+});
 
-   res.status(200).json(user)
+exports.getLoggedInUserDetails = BigPromise(async (req, res, next) => {
+    //req.user will be added by middleware
+    // find user by id
+    const user = await User.findById(req.user.id);
+  
+    //send response and user data
+    res.status(200).json({
+      success: true,
+      user,
+    });
+  });
+  
 
-})
-
-// delete
-exports.remove = BigPromise( async( req, res, next) => {
-   
-})

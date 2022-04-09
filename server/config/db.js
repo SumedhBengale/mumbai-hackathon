@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 
-
 const connetwithdb = () => {
     mongoose.connect(process.env.DB_URL, {
         useNewURLParser: true,
