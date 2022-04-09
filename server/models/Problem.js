@@ -49,7 +49,7 @@ const problemSchema = new mongoose.Schema({
             },        
         },
     },
-    // road sanitation general corruption 
+    // road sanitation general corruption
     category:{
         type: Number,
         enum: [1, 2, 3, 4]

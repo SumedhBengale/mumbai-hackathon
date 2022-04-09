@@ -1,4 +1,4 @@
-const BigPromise = require('../middleware/BigPromise')
+const BigPromise = require('../middleware/bigPromise')
 
 exports.home = BigPromise(async (req, res) => {
     // const db = await something();
