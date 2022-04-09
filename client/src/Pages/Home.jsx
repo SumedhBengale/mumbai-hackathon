@@ -39,7 +39,7 @@ useEffect(()=>{
     <>
       <Navbar></Navbar>
       <div className='mx-5'>
-        <div className='h-40 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-box'></div>
+        <div className='h-40 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-md'></div>
         <div className='flex justify-center relative bottom-7'>
           <label for="my-modal" class="input input-bordered modal-button bg-white hover:scale-105 rounded-lg w-full max-w-xl flex flex-start">
             <div className='relative top-2 text-black'>Add a Problem</div>
@@ -48,7 +48,7 @@ useEffect(()=>{
 
           <input type="checkbox" id="my-modal" class="modal-toggle"></input>
           <label for="my-modal" class="modal cursor-pointer">
-          <label class="modal-box relative" for="">s
+          <label class="modal-box relative" for="">
           <div className='font-bold pl-'>Add a Problem</div>
           <div className="form__img-input-container-1">
             <input 
@@ -58,7 +58,7 @@ useEffect(()=>{
                 className="visually-hidden-1 h-40 w-full"
                 onChange={handleImg}
             />
-            <label htmlFor="photo" className="form-img__file-label-1 h-full w-full"/>
+            <label htmlFor="photo" className="form-img__file-label-1 h-96 w-full"/>
             <img src={src} alt={alt} className="form-img__img-preview-1 w-full h-96 object-cover border-blue-500 border-2 rounded-box hover:scale-105 transition ease-out active:scale-100"/>
           </div>
               <form>
@@ -95,7 +95,7 @@ useEffect(()=>{
 
         <div className='grid grid-cols-12 gap-5'>
 
-          <div className='lg:col-start-1 lg:col-end-4 col-start-1 col-end-13'>
+          <div className='lg:col-start-1 lg:col-end-4 col-start-1 col-end-13 mx-5'>
             <MLAInfo></MLAInfo>
           </div>
 
@@ -103,7 +103,7 @@ useEffect(()=>{
             <Feed></Feed>
           </div>
 
-          <div className='lg:col-start-10 lg:col-end-13 col-start-1 col-end-13'>
+          <div className='lg:col-start-10 lg:col-end-13 col-start-1 col-end-13 mx-5'>
             <HighestRatedFeed></HighestRatedFeed>
           </div>
 

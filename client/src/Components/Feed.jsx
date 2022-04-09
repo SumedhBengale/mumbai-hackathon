@@ -5,7 +5,7 @@ function Feed() {
   return (
       <>
       <div className=''>
-          <div className='flex justify-center text-xl'>All Problems</div>
+          <div className='flex justify-start text-xl m-10 pb-5 underline underline-offset-2 decoration-blue-500'>All Problems</div>
             <ProblemCard></ProblemCard>
             <ProblemCard></ProblemCard>
             <ProblemCard></ProblemCard>

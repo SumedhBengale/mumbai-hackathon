@@ -1,8 +1,10 @@
 /* This is used to reset the default styles 
 applied to every element in this app */
 
-.form__img-input-container {
+.form__img-input-container-1 {
     position: relative;
+    /* width: 300px;
+    height: 300px; */
     margin: auto;
 }
 
@@ -26,11 +28,16 @@ we're going to use its associated label to trigger it */
     top: 0;
     left: 0;
     display: block;
-    border-radius: 5%;
+    /* width: 300px;
+    height: 300px; */
+    border-radius: 50%;
     cursor: pointer;
     background-color: rgba(245, 245, 231, 0);
 }
 
+/* .form-img__file-label:hover {
+    background-color: rgba(245, 245, 231, 0);
+} */
 
 
 /* The image element is going to be positioned under the 
@@ -38,6 +45,8 @@ label element, since the label is a see through, we're going
 to be able to see the preview of the image. */
 .form-img__img-preview-1 {
     display: block;
+    /* width: 300px;
+    height: 300px; */
     object-fit: cover;
      border: 3px rgb(59,130,246) solid;
 }

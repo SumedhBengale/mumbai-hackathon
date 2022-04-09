@@ -9,14 +9,13 @@ function MLAInfo() {
             </div>
         </div>
 
-        <div className='w-full border-primary border-2 rounded-box relative bottom-16 z-0'>
+        <div className='w-full border-slate-400 border-2 rounded-md relative bottom-16 z-0'>
           <div className='pt-16 px-2'>
             <div className='p-4'>Name:</div>
-            <div className='p-4'>Poltical Affiliation:</div>
+            <div className='p-4'>Political Affiliation:</div>
             <div className='p-4'>Representing: Area Name</div>
             <div className='p-4'>Educational Qualification:</div>
             <div className='p-4'>Agenda:</div>
-
           </div>
         </div>
     </>
