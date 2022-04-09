@@ -1,4 +1,6 @@
 import React from 'react'
+import promote from '../Images/promote.svg'
+import demote from '../Images/demote.svg'
 
 function ProblemCard() {
   return (
@@ -11,7 +13,7 @@ function ProblemCard() {
                     <p>Problem Location</p>
                     <div className='flex place-content-between'>
                         <div class="card-actions items-center">
-                            <label for="my-modal-1" class="btn btn-primary rounded-md modal-button btn-sm hover:-translate-y-1 mt-10">Read More</label>
+                            <label for="my-modal-1" class="btn btn-primary rounded-md btn-outline modal-button btn-sm hover:-translate-y-1 mt-10">Read More</label>
 
 
                             <input type="checkbox" id="my-modal-1" class="modal-toggle"></input>
@@ -29,8 +31,12 @@ function ProblemCard() {
                         </div>
 
                         <div class="card-actions justify-end mt-10">
-                            <button class="btn btn-primary rounded-md btn-sm hover:-translate-y-1">Up</button>
-                            <button class="btn btn-primary rounded-md btn-sm hover:-translate-y-1">Down</button>
+                            <button class="btn rounded-box btn-ghost scale-150 hover:bg-slate-200 hover:-translate-y-1">
+                                <img src={promote}></img>
+                            </button>
+                            <button class="btn btn-primary rounded-box scale-150 btn-ghost hover:bg-slate-200 hover:-translate-y-1 active:scale-200">
+                            <img src={demote}></img>
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -1,15 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 function SignIn() {
 
-  
-  function Login() {
-    let navigate=useNavigate();
-    useEffect(() => {
-      navigate('')
-    });
-
+  let navigate = useNavigate();
+  function gotoHome() {
+    // If pw and email are correct
+    navigate("/")
   }
 
   return (
@@ -26,22 +23,21 @@ function SignIn() {
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="text" placeholder="email" className="input input-bordered"></input>
+                <input type="text" placeholder="email" className="input input-bordered transition ease-in-out hover:-translate-y-1"></input>
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="text" placeholder="password" className="input input-bordered"></input>
+                <input type="text" placeholder="password" className="input input-bordered transition ease-in-out hover:-translate-y-1"></input>
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary" onClick={Login}>Login</button>
+                <button className="btn btn-primary transition ease-in-out hover:-translate-y-1" onClick={gotoHome}>Login</button>
               </div>
-              <label className="label">
-                  <Link to="/signup" className="label-text-alt link link-hover">Dont't have an Account?</Link>
+              <label className="label transition ease-in-out hover:-translate-y-1">
+                  <Link to='/signup'>Dont't have an Account?</Link>
                 </label>
             </div>
           </div>

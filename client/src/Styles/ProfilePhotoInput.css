@@ -48,6 +48,5 @@ to be able to see the preview of the image. */
     /* width: 300px;
     height: 300px; */
     object-fit: cover;
-    border-radius: 50%;
      border: 3px rgb(59,130,246) solid;
 }

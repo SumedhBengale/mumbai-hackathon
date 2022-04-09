@@ -73,17 +73,18 @@ useEffect(()=>{
 
               <div class="form-control w-full max-w-xl">
                 <label class="label">
-                  <span class="label-text">Brief Description of the Issue</span>
+                  <span class="label-text">Location</span>
                 </label>
-                <textarea type="textarea" placeholder="Description" class="input input-bordered w-full max-w-xl resize-none h-48"></textarea>
+                <input type="text" placeholder="Location" class="input input-bordered w-full max-w-xl"></input>
               </div>
 
               <div class="form-control w-full max-w-xl">
                 <label class="label">
-                  <span class="label-text">Location</span>
+                  <span class="label-text">Brief Description of the Issue</span>
                 </label>
-                <input type="textarea" placeholder="Location" class="input input-bordered w-full max-w-xl resize-none h-48"></input>
+                <textarea type="textarea" placeholder="Description" class="input input-bordered w-full max-w-xl resize-none h-48"></textarea>
               </div>
+              
 
               <div class="modal-action">
                 <label for="my-modal" class="btn px-16">Submt</label>

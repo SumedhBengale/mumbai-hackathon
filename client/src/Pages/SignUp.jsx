@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import '../Styles/ProfilePhotoInput.css'
 
 function SignUp() {
+
+  let navigate = useNavigate();
+  function gotoHome() {
+    // 
+    navigate("/")
+  }
 
   const [image, setImage]=useState(null);
 
@@ -42,51 +48,75 @@ useEffect(()=>{
             <p className="py-6">PS: Make sure you choose a strong password!</p>
           </div>
           <div className="card flex-shrink-0 w-full max-w-lg shadow-lg bg-base-100">
-            <div className="card-body grid grid cols-12">
-                <div className='lg:col-start-1 lg:col-end-5 col-start-1 col-end-13'>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input type="text" placeholder="email" className="input input-bordered"></input>
+
+
+              <div className='grid grid-cols-12 gap-1'>
+                <div className='col-start-1 col-end-8 mt-16 mx-5'>
+                  <div className="form-control">
+                    <label className="label required">
+                      <span className="label-text ">First Name</span>
+                    </label>
+                    <input type="text" placeholder="email" className="input input-bordered input-wide transition ease-in-out hover:-translate-y-1"></input>
+                  </div>
+
+                  <div className="form-control">
+                    <label className="label required">
+                      <span className="label-text ">Last Name</span>
+                    </label>
+                    <input type="text" placeholder="email" className="input input-bordered transition ease-in-out hover:-translate-y-1"></input>
+                  </div>
+                </div>
+
+                <div className='mt-12 mr-5 col-start-8 col-end-13'>
+                  <div className="form__img-input-container transition ease-in-out hover:-translate-y-1">
+                    <input 
+                        type="file" 
+                        accept=".png, .jpg, .jpeg" 
+                        id="photo" 
+                        className="visually-hidden h-40 w-full"
+                        onChange={handleImg}
+                    />
+                    <label htmlFor="photo" className="form-img__file-label h-full w-full"/>
+                    <img src={src} alt={alt} className="form-img__img-preview w-full h-50 rounded-full object-cover border-blue-500 border-2 rounded-box hover:scale-105 transition ease-out active:scale-100"/>
+                  </div>
+
+                  <div className='flex justify-center'>Add your Profile Photo</div>
+                </div>
               </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input type="text" placeholder="password" className="input input-bordered"></input>
-                <label className="label">
-                  <span className="label-text">Confirm Password</span>
-                </label>
-                <input type="text" placeholder="password" className="input input-bordered"></input>
-              </div>
-              <div className="form-control mt-6">
-                <button className="btn btn-primary">Sign Up</button>
-              </div>
-              <label className="label">
-                  <Link to="/signin" className="label-text-alt link link-hover">Already have an Account?</Link>
-              </label>
+
+                <div className='mx-5'>
+                  <div className="form-control">
+                    <label className="label required">
+                      <span className="label-text ">Email</span>
+                    </label>
+                    <input type="text" placeholder="email" className="input input-bordered transition ease-in-out hover:-translate-y-1"></input>
+                  </div>
+                  <div className="form-control">
+                    <label className="label required">
+                      <span className="label-text">Password</span>
+                    </label>
+                    <input type="text" placeholder="password" className="input input-bordered transition ease-in-out hover:-translate-y-1"></input>
+                    <label className="label required">
+                      <span className="label-text">Confirm Password</span>
+                    </label>
+                    <input type="text" placeholder="password" className="input input-bordered transition ease-in-out hover:-translate-y-1"></input>
+                  </div>
+                  <div className="form-control mt-6">
+                    <button onClick={gotoHome} className="btn btn-primary transition ease-in-out hover:-translate-y-1">Sign Up</button>
+                  </div>
+                  <label className="label">
+                      <Link to="/signin" className="label-text-alt link link-hover">Already have an Account?</Link>
+                  </label>
                 </div>
                 
-                <div className='lg:col-start-5 lg:col-end-13 col-start-1 col-end-13'>
-                <div className="form__img-input-container">
-                  <input 
-                      type="file" 
-                      accept=".png, .jpg, .jpeg" 
-                      id="photo" 
-                      className="visually-hidden h-40 w-40"
-                      onChange={handleImg}
-                  />
-                  <label htmlFor="photo" className="form-img__file-label h-40 w-40 rounded-box"/>
-                  <img src={src} alt={alt} className="form-img__img-preview w-40 h-40 object-cover border-blue-500 border-2 rounded-box hover:scale-105 transition ease-out active:scale-100"/>
-                </div>
-                <div className='flex justify-center'>Add your Profile Photo</div>
-                </div>
-            </div>
+                
+                
           </div>
         </div>
       </div>
     </>
+
+
   )
 }
 
