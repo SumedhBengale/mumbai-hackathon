@@ -87,7 +87,7 @@ useEffect(()=>{
               
 
               <div class="modal-action">
-                <label for="my-modal" class="btn px-16">Submt</label>
+                <label for="my-modal" class="btn px-16" >Submit</label>
               </div>
               </form>
           </label>
